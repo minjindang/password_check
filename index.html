@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ 
+<html>
+	<head>
+		<title>密碼複雜度即時檢核</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="http://knockoutjs.com/downloads/knockout-3.1.0.js"></script>
+		<link type="text/css" href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<ul class="rules">
+			<li data-bind="css: { pass: pwdRule1() }">至少一個英文字母</li>
+			<li data-bind="css: { pass: pwdRule2() }">至少一個數字</li>
+			<li data-bind="css: { pass: pwdRule3() }">至少8個字元</li>
+		</ul>
+		<!-- disable: hasClickedTooManyTimes -->
+		<label for="pwd">設定密碼</label>
+		<div>
+			<input name="pwd" type="password" data-bind="value: password, valueUpdate: 'keyup', css: { accept: allPass() }" />
+		</div>
+		
+		<label for="pwd">密碼確認</label>
+		<div>
+			<input name="pwd" type="password" data-bind="value: pwdConfirm, valueUpdate: 'keyup', css: { accept: match() }" />
+		</div>
+		
+		<!--<div>You've clicked <span data-bind='text: numberOfClicks'>&nbsp;</span> times</div>-->
+		<!--
+		<div>
+			<button data-bind="click: cc">CLICK</button>
+		</div>	
+		-->
+		<script type="text/javascript" src="js/model.js"></script>
+	</body>
+</html>

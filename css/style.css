@@ -1,0 +1,25 @@
+	* { padding: 2px; font-size: 10pt; }
+	
+	::-ms-reveal { display: none; }
+	
+	.rules { 
+		margin-left: 0px;
+	}
+		
+	.rules li {
+		list-style-type: none; margin-left: auto;
+		border-left-style: solid; border-left-width: 5px;
+		border-left-color: #808080; background-color: #C0C0C0;
+		margin-bottom: 4px; padding: 4px; margin-right:auto;
+	}
+		
+	li.pass {
+		border-left-color: #087521; 
+		background-color: #bedd71;
+	}
+	
+	.accept {
+		background-image: url("../images/accept.png");
+		background-repeat: no-repeat;
+		background-position-x: 99%; background-position-y: 50%;
+	}
